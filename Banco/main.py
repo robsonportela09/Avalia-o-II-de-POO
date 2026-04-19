@@ -24,9 +24,9 @@ while True:
     print("0 - Sair")
     print("\nDúvidas? SAC: 88 4002-8922")
 
-    opcao = input("\nEscolha: ")
+    opcao = input("\nEscolha: ") #Escolha do usuário
 
-    if opcao == "1":
+    if opcao == "1": 
         nome = input("Digite o seu nome: ")
         cpf = input("Digite o seu CPF: ")
         
