@@ -7,13 +7,13 @@ numero_conta = 1 #Numeração da conta
 
 
 def buscar_conta(numero): #Função que busca a conta a partir do número
-    for conta in contas:
-        if conta.get_numero() == numero:
+    for conta in contas: #for que compara conta digitada com a conta atual
+        if conta.get_numero() == numero: #encapsulamento com Get
             return conta
     return None
 
 
-while True:
+while True: #loop que executa até o user decidir sair
     # MENU 
     print("\n==== CAIXA ELETRÔNICO - Banco Master ======\n")
     print("1 - Criar Conta")
@@ -35,8 +35,9 @@ while True:
         print("2 - Conta Poupança")
         tipo = input("\nTipo: ")
 
-        cliente = Cliente(nome, cpf)
+        cliente = Cliente(nome, cpf)#Dados do cliente
         # ESTRUTURA CONDICIONAL VALIDANDO OS FATOS
+        # Define o tipo de conta escolhido pelo usuário
         if tipo == "1":
             conta = ContaCorrente(numero_conta, cliente)
 
@@ -57,11 +58,11 @@ while True:
 
         if conta: #Depósito
             valor = float(input("Insira o valor para depósito: "))
-            conta.depositar(valor)
+            conta.depositar(valor) #polimorfismo, onde cada tipo de conta pode ter comportamento próprio
         else:
             print("Conta não encontrada.")
 
-    elif opcao == "3": #Busca a conta
+    elif opcao == "3": 
         numero = int(input("Informe o número da conta: "))
         conta = buscar_conta(numero)
 
@@ -91,7 +92,7 @@ while True:
 
     elif opcao == "0":
         print("Sistema encerrado.")
-        break
+        break #Parar o loop/Finalizar o sistema
 
     else:
         print("Opção inválida.")
