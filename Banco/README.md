@@ -25,11 +25,11 @@ Esse projeto de ATM basicamente, simula o funcionamento básico de um caixa elet
 ## Estrutura de pastas do Projeto, segui o exemplo. Portanto os arquivos no git hub estão todos dentro da pasta banco. (Como mostra o "Diagrama" abaixo)
 
 banco/
-- main.py
 > clientes/
 > contas/
 > operacoes/
 - readme.md
+- main.py
+  
+obs. Documentei com comentários o código. 
 
-obs. Documentei com comentários o código. # Avalia-o-II-de-POO
-# Avalia-o-II-de-POO
